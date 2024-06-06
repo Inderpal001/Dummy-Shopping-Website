@@ -62,17 +62,10 @@ export default function Products() {
           </button>
         </div>
 
-        <div className="cards-wrapper">
+        <div className={`cards-wrapper ${loading ? "loader-wrapper" : ""}`}>
           {loading ? (
             <>
-              <Loader />
-              <Loader />
-              <Loader />
-              <Loader />
-              <Loader />
-              <Loader />
-              <Loader />
-              <Loader />
+               <Loader />
             </>
           ) : (
             data.map((item, i) => {

@@ -47,5 +47,11 @@
     margin: auto;
     justify-content: center;
     gap: 28px;
+    width: 100%;
+    min-height: 45vh;
+  }
+
+  .loader-wrapper{
+    @include flex-center;
   }
 }
