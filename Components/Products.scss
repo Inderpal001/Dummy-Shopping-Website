@@ -1,0 +1,51 @@
+@import "../app/global";
+
+.products-container {
+  @include flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 95%;
+  margin: auto;
+  @media screen and (max-width: 640px) {
+    width: 90%;
+  }
+
+  .category-btn-container {
+    @include flex;
+    width: 100%;
+    overflow-x: scroll;
+    justify-content: flex-end;
+    gap: 12px;
+    @media screen and (max-width: 640px) {
+      justify-content: unset;
+    }
+
+    .category-btn {
+      font-size: 18px;
+      line-height: 28px;
+      width: max-content;
+      padding: 8px 16px;
+      border-radius: 6px;
+      background-color: #8b5cf6d9;
+      color: #fff;
+      transition-duration: 200ms;
+      @media screen and (max-width: 640px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      &:hover {
+        background: #8b5cf6b3;
+      }
+    }
+  }
+
+  .cards-wrapper {
+    @include flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    gap: 28px;
+  }
+}

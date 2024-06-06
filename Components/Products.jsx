@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import CardComponent from "./CardComponent";
 import Loader from "./Loader";
+import "./Products.scss"
 
 export default function Products() {
   const [data, setData] = useState([]);
@@ -27,41 +28,41 @@ export default function Products() {
 
   return (
     <>
-      <div className="flex flex-col flex-wrap gap-6 sm:w-[90%] w-full m-auto">
-        <div className="flex w-full overflow-x-scroll sm:justify-end gap-3">
+      <div className="products-container">
+        <div className="category-btn-container">
           <button
             onClick={() => setCategory("")}
-            className="btn text-sm w-max sm:text-lg px-4 py-2 rounded-md bg-violet-500 text-white hover:bg-violet-400 duration-200"
+            className="category-btn"
           >
             All
           </button>
           <button
             onClick={() => setCategory("category/men's%20clothing")}
-            className="btn text-sm w-max sm:text-lg px-4 py-2 rounded-md bg-violet-500 text-white hover:bg-violet-400 duration-200"
+            className="category-btn"
           >
             Men&apos;s Clothing
           </button>
           <button
             onClick={() => setCategory("category/women's%20clothing")}
-            className="btn text-sm w-max sm:text-lg px-4 py-2 rounded-md bg-violet-500 text-white hover:bg-violet-400 duration-200"
+            className="category-btn"
           >
             Women&apos;s Clothing
           </button>
           <button
             onClick={() => setCategory("category/electronics")}
-            className="btn text-sm w-max sm:text-lg px-4 py-2 rounded-md bg-violet-500 text-white hover:bg-violet-400 duration-200"
+            className="category-btn"
           >
             Electronics
           </button>
           <button
             onClick={() => setCategory("category/jewelery")}
-            className="btn text-sm w-max sm:text-lg px-4 py-2 rounded-md bg-violet-500 text-white hover:bg-violet-400 duration-200"
+            className="category-btn"
           >
             Jewellery
           </button>
         </div>
 
-        <div className="flex flex-wrap gap-7 justify-center m-auto">
+        <div className="cards-wrapper">
           {loading ? (
             <>
               <Loader />

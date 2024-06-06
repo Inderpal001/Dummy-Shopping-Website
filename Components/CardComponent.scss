@@ -1,0 +1,85 @@
+@import "../app/global";
+
+.cardContainer {
+    @include flex;
+    margin:auto ;
+    height: 450px;
+    width:350px;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+    border: 1px solid #f3f4f6;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    @media screen and (max-width:640px){
+        width: 300px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        transition-timing-function: ease-out;
+        transition-duration: 200ms;
+    }
+
+    .img-container {
+        position: relative;
+        width: 100%;
+        height: 200px;
+    }
+
+    .product-title {
+        text-align: center;
+        margin-top: 12px;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+    }
+
+    .product-desc {
+        text-align: center;
+        font-size: 18px;
+        line-height: 28px;
+        line-height: 24px;
+    }
+
+    .rating-div {
+        @include flex-x-center;
+        gap: 8px;
+        justify-content: flex-end;
+    }
+
+    .price-btn-div {
+        @include flex;
+        justify-content: space-between;
+        margin-top: 8px;
+
+        .price-div {
+            @include flex-x-center;
+
+            .dollar-symbol{
+                font-size: 20px;
+                line-height: 28px;
+                color: #008000cc;
+            }
+
+            .price {
+                font-size: 18px;
+                line-height:28px;
+                font-weight: 500;
+            }
+        }
+
+        .add-btn {
+            padding: 4px 12px;
+            background-color: #8b5cf6d9;
+            color: #fff;
+            border-radius: 6px;
+            transition-duration: 200ms;
+
+            &:hover {
+                background: #8b5cf6b3;
+            }
+        }
+    }
+}
