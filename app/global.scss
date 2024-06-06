@@ -1,14 +1,27 @@
-@mixin flex{
+$darkPurple : #8b5cf6;
+$lightPurple : #a78bfa;
+
+@mixin flex {
     display: flex;
 }
 
-@mixin flex-x-center{
+@mixin flex-x-center {
     display: flex;
     align-items: center;
 }
 
-@mixin flex-center{
+@mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin small-font-size {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+@mixin medium-font-size {
+    font-size: 18px;
+    line-height: 28px;
 }

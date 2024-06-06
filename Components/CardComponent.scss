@@ -38,9 +38,7 @@
 
     .product-desc {
         text-align: center;
-        font-size: 18px;
-        line-height: 28px;
-        line-height: 24px;
+        @include medium-font-size;
     }
 
     .rating-div {
@@ -64,21 +62,20 @@
             }
 
             .price {
-                font-size: 18px;
-                line-height:28px;
+                @include medium-font-size;
                 font-weight: 500;
             }
         }
 
         .add-btn {
             padding: 4px 12px;
-            background-color: #8b5cf6d9;
+            background-color: $darkPurple;
             color: #fff;
             border-radius: 6px;
             transition-duration: 200ms;
 
             &:hover {
-                background: #8b5cf6b3;
+                background:$lightPurple;
             }
         }
     }

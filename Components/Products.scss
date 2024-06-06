@@ -27,16 +27,15 @@
       width: max-content;
       padding: 8px 16px;
       border-radius: 6px;
-      background-color: #8b5cf6d9;
+      background-color: $darkPurple;
       color: #fff;
       transition-duration: 200ms;
       @media screen and (max-width: 640px) {
-        font-size: 14px;
-        line-height: 20px;
+        @include small-font-size;
       }
 
       &:hover {
-        background: #8b5cf6b3;
+        background: $lightPurple;
       }
     }
   }
@@ -51,7 +50,7 @@
     min-height: 45vh;
   }
 
-  .loader-wrapper{
+  .loader-wrapper {
     @include flex-center;
   }
 }

@@ -28,8 +28,7 @@
       font-size: 24px;
       line-height: 32px;
       @media screen and (max-width: 640px) {
-        font-size: 18px;
-        line-height: 28px;
+       @include medium-font-size;
       }
     }
   }
@@ -75,8 +74,7 @@
         font-size: 24px;
         line-height: 32px;
         @media screen and (max-width:640px) {
-            font-size: 18px;
-            line-height: 28px;
+           @include medium-font-size;
         }
       }
 
@@ -118,14 +116,12 @@
 
             .cart-items-heading {
               font-weight: 600;
-              font-size: 18px;
-              line-height: 28px;
+             @include medium-font-size;
             }
 
             .cart-items-desc {
               margin-top: 4px;
-              font-size: 14px;
-              line-height: 20px;
+             @include small-font-size;
             }
           }
         }
@@ -147,7 +143,7 @@
               padding: 4px 16px;
               border-radius: 4px;
               color: #fff;
-              background: #8b5cf6;
+              background: $darkPurple;
             }
           }
 
@@ -190,13 +186,13 @@
         padding: 8px 16px;
         border-radius: 4px;
         color: #fff;
-        background: #8b5cf6;
+        background: $darkPurple;
         transition-duration: 150ms;
         font-size: 16px;
         line-height: 24px;
 
         &:hover{
-            background: #a78bfa;
+            background: $lightPurple;
         }
         @media screen and (max-width: 640px) {
           font-size: 14px;
