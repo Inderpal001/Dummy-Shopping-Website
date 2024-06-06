@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import CardComponent from "./CardComponent";
 import Loader from "./Loader";
 
@@ -20,9 +20,10 @@ export default function Products() {
     }
   };
 
-  useEffect(() => {
-    fetchingData();
-  }, [category]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+  fetchingData();
+}, [category]);
 
   return (
     <>
