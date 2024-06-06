@@ -15,7 +15,7 @@ export default function CardComponent({ image, title, desc, rating, price, id, p
 
   return (
     <div id={id} className='sm:w-[300px] lg:w-[350px] m-auto w-[80%] h-[450px] flex flex-col gap-2  bg-white border border-gray-100 rounded-lg p-5 hover:scale-[1.05] ease-out duration-200 cursor-pointer'>
-      <div className="relative w-full h-[200px]">
+      <div className="relative w-full img-height h-[200px]">
         <Image src={image} alt="" layout="fill" objectFit="contain" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
       </div>
       <h1 className='text-center mt-3 text-2xl font-semibold'>{title.slice(0, 22)}...</h1>
