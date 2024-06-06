@@ -129,9 +129,13 @@
         .cart-item-quantity-removebtn {
           @include flex-x-center;
           justify-content: space-between;
-          width: 100%;
+          width: 35%;
           gap: 12px;
+          @media screen and (max-width: 1024px) {
+            width: 50%;
+          }
           @media screen and (max-width: 640px) {
+            width: 100%;
             margin-top: 20px;
           }
 
